@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    @apply bg-slate-50 text-slate-900;
+  }
+
+  ::selection {
+    @apply bg-blue-100 text-blue-950;
+  }
+}
+
+@layer components {
+  .module-shell {
+    @apply min-h-screen bg-[radial-gradient(1100px_circle_at_50%_-220px,_rgba(100,210,255,0.20),_transparent_52%),linear-gradient(180deg,_#f8fbff_0%,_#f8fafc_28%,_#f8fafc_100%)];
+  }
+
+  .module-header {
+    @apply sticky top-0 z-30 border-b border-slate-200/80 bg-white/85 shadow-[0_1px_0_rgba(15,23,42,0.03)] backdrop-blur-xl;
+  }
+
+  .step-transition {
+    @apply animate-step-in;
+  }
+
+  .module-card {
+    @apply relative bg-white/95 rounded-3xl shadow-[0_1px_2px_rgba(0,0,0,0.04)] hover:shadow-[0_20px_40px_-12px_rgba(10,52,102,0.25)] transition-all duration-500 ease-out p-7 border border-slate-100 cursor-pointer hover:-translate-y-1.5 focus:outline-none focus:ring-2 focus:ring-territory-primary focus:ring-offset-2;
+  }
+
+  .tab-button {
+    @apply relative shrink-0 px-3.5 py-2.5 font-medium text-sm rounded-2xl border transition-all duration-200 ease-out focus:outline-none focus:ring-2 focus:ring-territory-primary focus:ring-offset-2;
+  }
+  
+  .tab-button-active {
+    @apply border-blue-200 bg-blue-50 text-territory-primary shadow-[0_5px_14px_-8px_rgba(10,132,255,0.55)];
+  }
+  
+  .tab-button-inactive {
+    @apply border-transparent text-slate-500 hover:border-slate-200 hover:bg-white hover:text-territory-primary;
+  }
+  
+  .external-link-button {
+    @apply bg-territory-primary hover:bg-territory-secondary text-white font-medium py-2.5 px-4 rounded-xl shadow-[0_7px_16px_-8px_rgba(10,132,255,0.7)] hover:-translate-y-0.5 hover:shadow-[0_11px_20px_-9px_rgba(10,132,255,0.75)] focus:outline-none focus:ring-2 focus:ring-territory-primary focus:ring-offset-2 transition-all duration-200 inline-flex items-center space-x-2;
+  }
+
+  .form-control {
+    @apply w-full px-4 py-3 border border-slate-200 rounded-2xl bg-white shadow-sm text-slate-800 placeholder:text-slate-400 transition-all duration-200 focus:border-blue-400 focus:outline-none focus:ring-4 focus:ring-blue-100;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}
