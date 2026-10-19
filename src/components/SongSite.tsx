@@ -62,7 +62,7 @@ const SongSite: React.FC = () => {
   };
 
   return (
-    <div className="module-shell min-h-screen">
+    <div className="module-shell flex min-h-screen flex-col">
       <header className="module-header">
         <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-4 sm:px-6 lg:px-8">
           <div>
@@ -78,7 +78,7 @@ const SongSite: React.FC = () => {
 
       <TabNavigation steps={steps} activeStep={activeStep.id} onStepChange={navigateToStep} />
 
-      <div key={activeStep.id} className="step-transition">
+      <div key={activeStep.id} className="step-transition flex-1">
         <SongStepContent
           step={activeStep}
           keywords={keywords}
@@ -96,6 +96,12 @@ const SongSite: React.FC = () => {
           <span className="font-medium text-territory-primary">{activeStepIndex + 1}/{steps.length}</span>
         </div>
       </div>
+
+      <footer className="mt-auto border-t border-slate-200/80 bg-white/60 px-4 py-5 pb-24 text-center sm:px-6 sm:pb-6 lg:px-8">
+        <p className="mx-auto max-w-7xl text-xs leading-6 text-slate-500 sm:text-sm">
+          © {new Date().getFullYear()} 섬 지역의 미래 탐구: 서울대학교 지리교육과
+        </p>
+      </footer>
     </div>
   );
 };
