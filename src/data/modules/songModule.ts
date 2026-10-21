@@ -191,7 +191,7 @@ export const MODULE_3_DATA: ModuleData = {
       description: '완성한 동해 노래와 앨범 커버를 공유하고 다른 작품을 감상하세요',
       content: '완성한 동해 노래와 앨범 커버를 함께 업로드하세요. 다른 학습자가 선택한 테마와 노래에 반영한 동해 표기 정보를 찾아보며 작품을 감상하세요.',
       showEmbeddedPadlet: true,
-      padletUrl: 'https://padlet.com/ghdwns8185/padlet-42d9k8p1i45p2duv',
+      padletUrl: 'https://padlet.com/ghdwns8185/padlet-s024p5u3qw2qpq977lf7',
       editableContent: false,
     },
   ],
